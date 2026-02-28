@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Ma Shan Zheng', cursive, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    color: #333;
+    /* 动画背景 */
+    background: linear-gradient(45deg, #f8d7da, #d1e7dd, #cce5ff, #f8d7da);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.container h1 {
+    font-size: 4em;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    font-size: 1.5em;
+    color: rgba(255, 255, 255, 0.85);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-weight: normal;
+}
+
+#main-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    margin-bottom: 25px;
+    animation: pulse 4s infinite ease-in-out;
+}
+
+#lyrics {
+    font-size: 1.7em;
+    font-weight: bold;
+    height: 70px;
+    min-width: 450px;
+    color: pink;
+    transition: all 0.4s ease-in-out;
+    animation: fadeIn 0.8s forwards;
+}
+
+#background-music {
+    margin-top: 25px;
+    filter: saturate(1.2);
+}
+
+footer {
+    position: absolute;
+    bottom: 15px;
+    font-size: 0.9em;
+    color: rgba(0, 0, 0, 0.4);
+    font-family: sans-serif; /* 使用更易读的非艺术字体 */
+}
+
+/* 动画定义 */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
