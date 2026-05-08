@@ -10,9 +10,9 @@
 <div class="container">
     <h1>Power!</h1>
     <p class="subtitle">生活需要Power</p>
-    <img src="pic1.jpg" alt="主界面图片" id="main-img">
+    <img src="pic.jpg" alt="主界面图片" id="main-img">
     <div id="lyrics"></div>
-    <audio id="background-music" src="music/left-right-hand.mp3" controls></audio>
+    <audio id="background-music" src="music/left-right-hand.mp3" controls autoplay></audio>
 </div>
 
 <script id="lrc-content" type="text/lrc">
@@ -53,28 +53,9 @@
     [02:25.26]有方向 有决心 有节奏
     [02:28.93]一起牵着手 向前走
 </script>
-
-<script>
-    // 自动播放音乐（兼容所有浏览器）
-    window.addEventListener('DOMContentLoaded', function () {
-        const audio = document.getElementById('background-music');
-        audio.muted = true; // 先静音，绕过浏览器限制
-        audio.play().then(() => {
-            setTimeout(() => {
-                audio.muted = false; // 0.1秒后打开声音
-            }, 100);
-        }).catch(err => {
-            console.log('自动播放被限制，等待用户交互');
-            document.body.onclick = () => {
-                audio.play();
-                audio.muted = false;
-            };
-        });
-    });
-</script>
-
+<script src="script.js"></script>
 <footer>
-    Powered by https://game.tuomasi-dang.com <br><br> author:Tuomasi
+    Powered by https://game.tuomasi-dang.com       </br> </br>   author:Tuomasi
 </footer>
 </body>
 </html>
