@@ -5,6 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>生活需要Power</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* 修复底部遮挡问题 + 页面基础样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            padding-bottom: 80px;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 42px;
+            margin: 20px 0;
+            color: #ff6b6b;
+        }
+        .subtitle {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #666;
+        }
+        #main-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        #lyrics {
+            min-height: 100px;
+            margin: 20px 0;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+        }
+        /* 音频播放器样式 */
+        #background-music {
+            width: 100%;
+            margin: 30px 0;
+        }
+        /* 底部信息 */
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: #f5f5f5;
+            padding: 10px;
+            text-align: center;
+            font-size: 12px;
+            color: #999;
+            z-index: -1;
+        }
+    </style>
 </head>
 <body>
 <div class="container">
@@ -55,7 +114,8 @@
 </script>
 <script src="script.js"></script>
 <footer>
-    Powered by https://game.tuomasi-dang.com       </br> </br>   author:Tuomasi
+    Powered by https://game.tuomasi-dang.com <br>
+    author:Tuomasi
 </footer>
 </body>
 </html>
